@@ -368,7 +368,7 @@ const EXP={
  cache:{title:'Only 12 layers keep a cache.',body:'The QSA layers cache 2 KV heads x 256 dims x (k+v) x 2 bytes = 4,096 bytes per token per layer: 49,152 bytes per token across the 12 of them. The other 36 layers hold a constant delta-rule state, so the growing part of the memory is a quarter of the stack - and the indexer adds 512-block sparse reads on top.'}
 };
 const BENCH=@@BENCH@@;
-const BENCH_MODELS=@@BENCHMODELS@@;
+const BENCH_MODELS=@@BENCHMODELS@@; const CARD_BENCH=@@CARDBENCH@@;
 function pickExperts(seed,n=512,k=10){return Array.from({length:k},(_,j)=>(seed*7+j*13)%n);}
 const PHASES=[
  {name:'Embed',label:'Embed',from:0,to:4,active:'248,320 + 20M',color:COL.vocab,caption:'Token ids, then n-grams.',desc:'The token embedding is 248,320 padded rows. Layer 2 adds the n-gram embedding: 20,000,000 bigram/trigram rows looked up by hash - 51B parameters that scale the model without scaling the compute.'},
@@ -499,6 +499,7 @@ def build_data_js(t: dict) -> str:
     js = js.replace("@@LAYERTYPES@@", json.dumps(layer_types()))
     js = js.replace("@@BENCH@@", json.dumps(load(DIR / "bench.json"), ensure_ascii=False))
     js = js.replace("@@BENCHMODELS@@", json.dumps(load(DIR / "bench-models.json"), ensure_ascii=False))
+    js = js.replace("@@CARDBENCH@@", json.dumps(load(DIR / "card-bench.json"), ensure_ascii=False))
     return js
 
 
