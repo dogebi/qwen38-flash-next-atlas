@@ -48,12 +48,17 @@ def apply_rewrites(text: str, rewrites) -> tuple[str, list[str]]:
 
 def apply_literals(text: str, subs) -> tuple[str, list[str]]:
     report = []
+    superseded = []
     for old, new in subs:
         n = text.count(old)
         if n < 1:
-            raise SystemExit(f"literal sub {old[:60]!r}: no matches (nothing to rewrite)")
+            # already rewritten by an earlier entry in this list (overlapping copy fixes)
+            superseded.append(old[:60])
+            continue
         # copy fixes legitimately recur (a layer range shows up in the rail, the title and the guide);
         # replace every occurrence and report how many were touched.
         text = text.replace(old, new)
         report.append(f"{old[:58]}  x{n}")
+    for a in superseded:
+        report.append(f"(superseded) {a}")
     return text, report
