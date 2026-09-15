@@ -45,7 +45,7 @@ R.append(("""['Main attention queries'""",
 R.append(("""['Local SWA KV'""",
           """['NGated DeltaNet','Own weights','A second q/k/v/o set with its own norms: the latent stack, conditioned on the flow-matching timestep.',TC.nar_attn,'own'],"""))
 R.append(("""['Global main KV'""",
-          """['KV cache','Own cache','2 KV heads x 128 dims x (k+v) x 2 B = 4,096 bytes per token per layer, and every layer has one.',TC.kv,'own'],"""))
+          """['KV cache','Own cache','2 KV heads x 256 dims x (k+v) x 2 B = 4,096 bytes per token per layer, and only the 12 QSA layers have one.',TC.kv,'own'],"""))
 R.append(("""['Indexer keys'""",
           """['Timestep conditioning','Shared','mtp.fc_hidden turns the flow-matching timestep into 2048 dims and feeds the latent stack.',TC.mtp,'shared'],"""))
 R.append(("""['Top-512 selection'""",

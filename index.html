@@ -1212,7 +1212,7 @@ ${m.mode&&html`<p class="layer-execution"><b>Block ${String(m.index).padStart(2,
  ${[
 ['Gated DeltaNet','Own weights','16 query heads over 2 KV heads at head_dim 256, with per-head q and k norms.',TC.ar_attn,'own'],
 ['NGated DeltaNet','Own weights','A second q/k/v/o set with its own norms: the latent stack, conditioned on the flow-matching timestep.',TC.nar_attn,'own'],
-['KV cache','Own cache','2 KV heads x 128 dims x (k+v) x 2 B = 4,096 bytes per token per layer, and every layer has one.',TC.kv,'own'],
+['KV cache','Own cache','2 KV heads x 256 dims x (k+v) x 2 B = 4,096 bytes per token per layer, and only the 12 QSA layers have one.',TC.kv,'own'],
 ['Timestep conditioning','Shared','mtp.fc_hidden turns the flow-matching timestep into 2048 dims and feeds the latent stack.',TC.mtp,'shared'],
 ['Bridges','Shared','n-gram embedding projects to the 64-dim latent space; MTP layer projects back. Tiny, and the only tensors that leave the language width.',TC.ngram,'shared']
  ].map(([name,status,desc,c,kind])=>html`<div class="ownership-row"><i class=${kind} style=${{'--own':c}}/><div><b>${name}</b><small>${desc}</small></div><span style=${{color:kind==='off'?'#63768e':c}}>${status}</span></div>`)}</div>
