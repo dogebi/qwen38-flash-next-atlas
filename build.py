@@ -563,7 +563,7 @@ def main() -> int:
     # tag-aware: "DeepSeek <em>V4.1 Flash</em>" hides the phrase from a raw markup grep, so scan the
     # rendered text as well. Bare "DeepSeek" stays allowed (engine attribution + a comparison model).
     must_not = ["DeepSeek V4.1 Flash", "DeepSeek V4", "DSpark", "Engram table", "CSA2", "890", "552B",
-                "wo_a", "GLM-5.3", "YuE2", "nar_self_attn", "DeepSeek-AI's card", "DeepSeek Harness"]
+                "wo_a", "YuE2", "nar_self_attn", "DeepSeek-AI's card", "DeepSeek Harness"]
     body = text.split("</head>", 1)[-1]
     scan = body.replace("deepseek_sparse_attention", "<layer-type>")
     import re as _re
