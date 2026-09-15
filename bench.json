@@ -3,6 +3,7 @@
   "GPQA Diamond",
   "Reasoning",
   [
+   91.7,
    93.4,
    94.1,
    92.9,
@@ -16,6 +17,7 @@
   "Terminal-Bench 2.1",
   "Agentic",
   [
+   null,
    89.1,
    88.8,
    88.3,
@@ -29,6 +31,7 @@
   "Terminal-Bench 3.0",
   "Agentic",
   [
+   null,
    43.3,
    34.4,
    17.7,
@@ -42,6 +45,7 @@
   "Terminal-Bench 4.0",
   "Agentic",
   [
+   null,
    51.8,
    39.9,
    12.6,
@@ -55,6 +59,7 @@
   "DeepSWE v1.1",
   "Agentic",
   [
+   58.7,
    74,
    73,
    67.5,
@@ -68,6 +73,7 @@
   "ProgramBench",
   "Agentic",
   [
+   null,
    37,
    23,
    17.5,
@@ -81,6 +87,7 @@
   "NL2Repo-Bench",
   "Agentic",
   [
+   48.1,
    75.3,
    56.8,
    58,
@@ -95,6 +102,7 @@
   "Agentic",
   [
    null,
+   null,
    84.5,
    80,
    84.5,
@@ -108,6 +116,7 @@
   "Agentic",
   [
    null,
+   null,
    74.3,
    null,
    null,
@@ -120,6 +129,7 @@
   "ExploitGym",
   "Agentic",
   [
+   null,
    22.1,
    33.7,
    null,
@@ -133,6 +143,7 @@
   "HLE with tools",
   "Agentic",
   [
+   null,
    63.6,
    null,
    59.8,
@@ -146,6 +157,7 @@
   "AutomationBench",
   "Agentic",
   [
+   null,
    50.3,
    45.8,
    46.7,
@@ -159,6 +171,7 @@
   "Agent's Last Exam",
   "Agentic",
   [
+   51.2,
    28.6,
    26.7,
    27.6,
@@ -172,6 +185,7 @@
   "Chartography with tools",
   "Visual",
   [
+   null,
    84,
    79.9,
    68.1,
@@ -185,6 +199,7 @@
   "BabyVision with tools",
   "Visual",
   [
+   null,
    94.1,
    88.9,
    85.7,
@@ -198,6 +213,7 @@
   "ZeroBench-main (Pass@5)",
   "Visual",
   [
+   null,
    52,
    53,
    41,
