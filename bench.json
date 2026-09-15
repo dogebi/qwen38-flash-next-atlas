@@ -1,0 +1,277 @@
+[
+ [
+  "# Params",
+  "",
+  [
+   125.0,
+   27.0,
+   397.0,
+   284.0,
+   null
+  ]
+ ],
+ [
+  "# Activated params",
+  "",
+  [
+   6.0,
+   27.0,
+   17.0,
+   13.0,
+   null
+  ]
+ ],
+ [
+  "# N-gram embedding params",
+  "",
+  [
+   51.0,
+   null,
+   null,
+   null,
+   null
+  ]
+ ],
+ [
+  "Agentic codingDeepSWE 1.1",
+  "",
+  [
+   58.7,
+   42.2,
+   16.5,
+   54.4,
+   null
+  ]
+ ],
+ [
+  "Agentic codingSWE-bench Pro",
+  "",
+  [
+   62.5,
+   61.7,
+   55.8,
+   56.0,
+   53.4
+  ]
+ ],
+ [
+  "Multilingual software engineeringSWE-bench Multilingual",
+  "",
+  [
+   81.0,
+   73.8,
+   75.8,
+   null,
+   77.5
+  ]
+ ],
+ [
+  "Repo-level code generationNL2Repo-Bench",
+  "",
+  [
+   48.1,
+   42.3,
+   41.1,
+   54.2,
+   47.6
+  ]
+ ],
+ [
+  "Long-horizon office workCoWorkBench",
+  "",
+  [
+   73.9,
+   70.7,
+   65.1,
+   45.1,
+   68.2
+  ]
+ ],
+ [
+  "Professional job tasksJobBench",
+  "",
+  [
+   55.7,
+   33.4,
+   27.6,
+   41.3,
+   36.6
+  ]
+ ],
+ [
+  "Frontier agentic tasksAgents' Last Exam",
+  "",
+  [
+   124.3,
+   120.4,
+   113.2,
+   125.2,
+   null
+  ]
+ ],
+ [
+  "Real-world tool useToolathlon Verified (Pass@1)",
+  "",
+  [
+   73.5,
+   67.1,
+   50.6,
+   70.3,
+   null
+  ]
+ ],
+ [
+  "Instruction followingIFBench",
+  "",
+  [
+   81.3,
+   79.5,
+   79.1,
+   79.2,
+   62.5
+  ]
+ ],
+ [
+  "Scientific reasoningGPQA Diamond",
+  "",
+  [
+   91.7,
+   89.2,
+   90.3,
+   90.8,
+   91.3
+  ]
+ ],
+ [
+  "Multidisciplinary reasoningHLE",
+  "",
+  [
+   35.9,
+   30.8,
+   34.7,
+   33.8,
+   40.0
+  ]
+ ],
+ [
+  "Competitive codingLiveCodeBench v6",
+  "",
+  [
+   91.9,
+   90.3,
+   89.6,
+   90.6,
+   88.8
+  ]
+ ],
+ [
+  "",
+  "",
+  [
+   3.8,
+   3.8,
+   3.7,
+   -4.6
+  ]
+ ],
+ [
+  "Multimodal tool useClawEval-MM",
+  "",
+  [
+   364.4,
+   357.4,
+   357.4,
+   352.5
+  ]
+ ],
+ [
+  "Application recreationRecreationBench",
+  "",
+  [
+   49.9,
+   47.1,
+   30.2,
+   null
+  ]
+ ],
+ [
+  "Mobile useAndroidWorld",
+  "",
+  [
+   84.5,
+   81.9,
+   81.0,
+   62.0
+  ]
+ ],
+ [
+  "Computer useOSWorld 2.0",
+  "",
+  [
+   19.4,
+   19.4,
+   2.8,
+   null
+  ]
+ ],
+ [
+  "Visual web developmentVision2Web",
+  "",
+  [
+   64.0,
+   62.9,
+   42.1,
+   null
+  ]
+ ],
+ [
+  "Embodied intelligenceERQA",
+  "",
+  [
+   72.3,
+   65.5,
+   69.8,
+   40.8
+  ]
+ ],
+ [
+  "Long video understandingLVBench",
+  "",
+  [
+   76.6,
+   72.4,
+   76.2,
+   63.0
+  ]
+ ],
+ [
+  "Real-world perceptionRealWorldQA",
+  "",
+  [
+   88.5,
+   85.9,
+   86.9,
+   73.9
+  ]
+ ],
+ [
+  "Visual math problem solvingMathVision",
+  "",
+  [
+   90.6,
+   90.0,
+   90.3,
+   65.5
+  ]
+ ],
+ [
+  "Scientific chart analysisCharXiv (RQ)",
+  "",
+  [
+   84.6,
+   83.7,
+   85.8,
+   66.0
+  ]
+ ]
+]
