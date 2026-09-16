@@ -559,6 +559,22 @@ def main() -> int:
           f"({len(panels.LITERAL_SUBS) - len(lit)} superseded)")
     text, rep2 = objectcode.apply_literals(text, lit)
 
+    # WebMCP tools: webmcp-tools.js 를 @@WEBMCP@@ 자리에 인라인 삽입 (외부 스크립트 아님 → CSP 원문 유지)
+    wmcp_file = DIR / "webmcp-tools.js"
+    if "@@WEBMCP@@" in text:
+        if not wmcp_file.exists():
+            print("RESIDUE FAIL: webmcp-tools.js missing (needed for @@WEBMCP@@)", file=sys.stderr)
+            return 9
+        wmcp = wmcp_file.read_text(encoding="utf-8").rstrip() + "\n"
+        if "</script" in wmcp.lower():
+            print("RESIDUE FAIL: webmcp-tools.js contains </script", file=sys.stderr)
+            return 9
+        text = text.replace("@@WEBMCP@@", wmcp)
+        print(f"webmcp · inlined {len(wmcp):,} B of tools")
+        if "@@WEBMCP@@" in text:
+            print("RESIDUE FAIL: @@WEBMCP@@ not fully replaced", file=sys.stderr)
+            return 9
+
     must_have = ["Qwen3.8-Flash-Next", "Gated DeltaNet", "Qwen Sparse Attention", "512", "NVFP4",
                  "n-gram", "MTP", "262,144"]
     # tag-aware: "DeepSeek <em>V4.1 Flash</em>" hides the phrase from a raw markup grep, so scan the
