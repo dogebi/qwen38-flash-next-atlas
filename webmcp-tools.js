@@ -44,7 +44,8 @@
     return new Promise(function (resolve, reject) {
       (function poll() {
         var d = atlas();
-        if (d && d.app && d.engine) return resolve(d);
+        // engine 은 3D 초기화(WebGL) 실패 시 null 일 수 있다 — 데이터/벤치마크 도구는 불필요
+        if (d && d.app) return resolve(d);
         if (Date.now() - t0 > (timeoutMs || ATLAS_WAIT_MS)) return reject(new Error('ATLAS_DEBUG not ready (atlas still loading)'));
         setTimeout(poll, 200);
       })();
@@ -253,6 +254,7 @@
             if (list[i].name === name && (!modId || list[i].module === modId)) { hit = list[i]; break; }
           }
           if (!hit) return ok({ focused: false, reason: 'tensor not found', requested: name, module: modId });
+          if (typeof d.app.select !== 'function') return ok({ focused: false, reason: 'view control unavailable (3D engine not initialised in this browser)' });
           d.app.select(hit.module, name);
           // React 상태 반영을 기다린 뒤 스냅샷 (즉시 읽으면 selected가 null로 나온다)
           return new Promise(function (resolve) {
